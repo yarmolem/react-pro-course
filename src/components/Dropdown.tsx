@@ -5,7 +5,8 @@ import {
   useContext,
   useCallback,
   ReactElement,
-  createContext
+  createContext,
+  CSSProperties
 } from 'react'
 
 import { nanoid } from 'nanoid'
@@ -19,12 +20,14 @@ interface DropdownContextProps {
 }
 
 interface Props {
+  className?: string
+  style?: CSSProperties
   children: ReactElement | ReactElement[]
 }
 
 export const DropdownContext = createContext({} as DropdownContextProps)
 
-const Dropdown = ({ children }: Props) => {
+const Dropdown = ({ children, className, style }: Props) => {
   const idRef = useRef<string | null>(null)
   const [isOpen, setIsOpen] = useState(false)
   const groupContext = useContext(DropdownGroupContext)
@@ -54,7 +57,9 @@ const Dropdown = ({ children }: Props) => {
         handleToggle
       }}
     >
-      <div className={styles.dropdown}>{children}</div>
+      <div style={style} className={[styles.dropdown, className].join(' ')}>
+        {children}
+      </div>
     </DropdownContext.Provider>
   )
 }

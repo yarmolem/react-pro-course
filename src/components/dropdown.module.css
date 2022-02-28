@@ -4,23 +4,16 @@
 }
 
 .dropdown .dropdown_head {
-  /* width: 100%; */
   display: flex;
-  background-color: cadetblue;
   justify-content: space-between;
   padding: 0.5rem;
 }
 
 .dropdown .dropdown_content {
-  color: white;
-  background-color: darkslateblue;
-}
-
-.dropdown .dropdown_content div {
   padding: 1rem;
 }
 
-.dropdown .dropdown_content div p {
+.dropdown .dropdown_content p {
   margin: 0;
 }
 

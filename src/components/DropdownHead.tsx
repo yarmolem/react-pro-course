@@ -1,17 +1,22 @@
-import { useContext } from "react";
-import { DropdownContext } from "./Dropdown";
+import { CSSProperties, useContext } from 'react'
+import { DropdownContext } from './Dropdown'
 
-import styles from "./dropdown.module.css";
+import styles from './dropdown.module.css'
 
-const DropdownHead = () => {
-  const { isOpen, handleToggle } = useContext(DropdownContext);
+interface Props {
+  className?: string
+  style?: CSSProperties
+}
+
+const DropdownHead = ({ className, style }: Props) => {
+  const { isOpen, handleToggle } = useContext(DropdownContext)
 
   return (
-    <div className={styles.dropdown_head}>
-      <span>{isOpen ? "OPEN" : "CLOSE"}</span>
+    <div style={style} className={[styles.dropdown_head, className].join(' ')}>
+      <span>{isOpen ? 'OPEN' : 'CLOSE'}</span>
       <button onClick={handleToggle}>TOGGLE</button>
     </div>
-  );
-};
+  )
+}
 
-export default DropdownHead;
+export default DropdownHead

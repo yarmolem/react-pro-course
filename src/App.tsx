@@ -1,68 +1,26 @@
-import { Dropdown, DropdownContent, DropdownHead } from "./components";
+import { Dropdown, DropdownContent, DropdownHead } from './components'
 
 const App = () => {
   return (
     <div className="container">
       <div className="wrap">
-        <Dropdown>
-          <DropdownHead />
+        <Dropdown style={{ borderRadius: '1rem', overflow: 'hidden' }}>
+          <DropdownHead className="bg-dark text-white" />
           <DropdownContent>
             <p>
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
               reprehenderit in voluptate velit esse cillum dolore eu fugiat
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum."
-            </p>
-          </DropdownContent>
-        </Dropdown>
-        <Dropdown>
-          <DropdownHead />
-          <DropdownContent>
-            <p>
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum."
-            </p>
-          </DropdownContent>
-        </Dropdown>
-        <Dropdown>
-          <DropdownHead />
-          <DropdownContent>
-            <p>
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum."
-            </p>
-          </DropdownContent>
-        </Dropdown>
-        <Dropdown>
-          <DropdownHead />
-          <DropdownContent>
-            <p>
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum."
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
           </DropdownContent>
         </Dropdown>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App

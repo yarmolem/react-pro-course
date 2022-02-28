@@ -8,3 +8,11 @@
   max-width: 400px;
   overflow: hidden;
 }
+
+.bg-dark {
+  background-color: #323232;
+}
+
+.text-white {
+  color: white;
+}

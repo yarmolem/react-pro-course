@@ -1,24 +1,32 @@
-import { ReactElement, useContext } from "react";
-import { DropdownContext } from "./Dropdown";
-import styles from "./dropdown.module.css";
+import { CSSProperties, ReactElement, useContext } from 'react'
+import { DropdownContext } from './Dropdown'
+import styles from './dropdown.module.css'
 
 interface DropdownContentProps {
-  children?: string | ReactElement | ReactElement[];
+  className?: string
+  style?: CSSProperties
+  children?: string | ReactElement | ReactElement[]
 }
 
-const DropdownContent = ({ children }: DropdownContentProps) => {
-  const { isOpen } = useContext(DropdownContext);
+const DropdownContent = ({
+  style,
+  children,
+  className
+}: DropdownContentProps) => {
+  const { isOpen } = useContext(DropdownContext)
 
   return (
     <div
+      style={style}
       className={[
         styles.dropdown_content,
         isOpen ? styles.content_open : styles.content_close,
-      ].join(" ")}
+        className
+      ].join(' ')}
     >
-      <div>{children}</div>
+      {children}
     </div>
-  );
-};
+  )
+}
 
-export default DropdownContent;
+export default DropdownContent
